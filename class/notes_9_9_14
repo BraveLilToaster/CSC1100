@@ -1,0 +1,32 @@
+static_cast<type>(value)
+
+this syntax can be used to convert numbers to other types
+
+ex.
+static_cast<double>(3)
+will convert 3 to a double
+
+ex.
+static_cast<int>(7.9)
+will convert 7.9 to 7
+ 
+rounds down. dont forget
+
+ex.
+static_cast<int>(7.9)
+
+
+constant variables
+
+const double CONVERSION = 4.4;
+
+
+x = 5;
+y = ++5;
+
+x=6, y =6
+
+x = 5;
+y = 5++;
+
+x=6, y=5

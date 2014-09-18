@@ -1,0 +1,15 @@
+//CSC 1100: Problem Solving and Programming 
+//notes on Aug 28, 14
+
+using c++ and visual studio *crying face*
+
+Login to computers:
+uname:csstudent
+pass:csstudent
+
+my blackboard portal isnt working yet i have to get that fixed.
+source code and slides form the class are available  on blackboard
+
+Assignment 1 is due on 9/16/14.
+
+
