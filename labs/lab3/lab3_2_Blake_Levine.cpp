@@ -1,21 +1,38 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main() {
-	double milkLiters, milkCarton = 3.78, literCost = 0.38, cartonProfit = .27;
 
-	cout << endl << "How much milk was produced today in liters:" << endl;
-	cin >> milkLiters;
+	double payRate = 15.50, hrsWorkWeek, totalIncome, postTaxIncome;
 
-	int cartonsTotal = static_cast<int>(milkLiters / milkCarton);
-	cout << endl << "That should fill " << cartonsTotal << " cartons." << endl;
+	cout << "Enter pay rate per hour: ";
+	cin >> payRate;
 
-	double milkCost = cartonsTotal * literCost;
-	cout << "That costs $" << milkCost << endl;
+	cout << "Enter number of  hours worked this week: ";
+	cin >> hrsWorkWeek;
 
-	double milkProfit = cartonsTotal * cartonProfit;
-	cout << "The profit for today will be  $" << milkProfit << endl << endl;
+	//calculates income before and after taxes
+	totalIncome = 5.00 * (payRate * hrsWorkWeek);
+	postTaxIncome = totalIncome - (.14 * totalIncome);
+	cout << "Total income before taxes is $" << totalIncome << ", and after taxes is $" << postTaxIncome << "." << endl;
+
+	//money spent on clothes and accessories
+	double spendClothes = postTaxIncome * .10;
+	cout << "Total income spent on clothes and accessories: $" << spendClothes << ".00" << endl;
+
+	//money spent on schoolsupplies
+	double spendSchoolSupplies = postTaxIncome * .01;
+	cout << "Total income spent on clothes and accessories: $" << spendSchoolSupplies << "0" << endl;
+
+	//money spent on savings bonds
+	double spendBonds = postTaxIncome * .25;
+	cout << "Total income spent on clothes and accessories: $" << spendBonds << ".00" << endl;
+
+	//money parents spend on savings bonds
+	double spendBondsParents = spendBonds * .50;
+	cout << "Total income spent on clothes and accessories: $" << spendBondsParents << ".00" << endl;
+
+
 
 	return 0;
 }
