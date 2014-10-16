@@ -1,19 +1,7 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
-
-/*
- * #include <cmath>
- *  pow(2.0, 3.0);
- *
- * cin.get();
- *
- * cin.putback('m');
- *
- * ch2 = cin.peek();
- *
- * cin.clear();
- */
 
 int main(){
 
@@ -90,14 +78,14 @@ int main(){
 		}
 
 		//c
-		else if(qChar == 'b') {
+		else if(qChar == 'c') {
 			cin >> y;
 			cin.ignore(100, '\n');
 			cin >> x >> symbol;
 		}
 
 		//d
-		else if(qChar == 'b') {
+		else if(qChar == 'd') {
 			cin.get(symbol);
 			cin.ignore(100, '\n');
 			cin >> x;
@@ -106,7 +94,7 @@ int main(){
 		}
 
 		//e
-		else if(qChar == 'b') {
+		else if(qChar == 'e') {
 			cin.ignore(100, '\n');
 			cin >> x >> symbol;
 			cin.ignore(100, '\n');
@@ -117,15 +105,90 @@ int main(){
 	}
 
 	//number 4
-	if (qNum == 2){
+	if (qNum == 4){
 		char qChar;
 		cout << "\nNow enter the problem letter: " << endl;
 		cin >> qChar;
 
+		cin.ignore();
+
 		int num;
 		char discard;
+		if(qChar == 'a') {
+			cin.get(discard);
+			cin >> num;
+		}
+		if(qChar == 'b') {
+			discard = cin.peek();
+			cin >> num;
+		}
+		if(qChar == 'c') {
+			cin.get(discard);
+			cin.putback (discard);
+			cin >> discard;
+			cin >> num;
+		}
+		cout << "num: " << num << endl <<"discard: " << discard << endl;
 	}
 
+	//number 5
+	if (qNum == 5){
+		char qChar;
+		cout << "\nNow enter the problem letter: " << endl;
+		cin >> qChar;
+
+
+		int age;
+		string name;
+		
+		cin >> age;
+		getline(cin, name);
+
+		cout << "name: " << name << endl << "age: " << age << endl;
+		//input number 1
+		//23 Lance Grant
+		//input number 2
+		//23 
+		//Lance Grant
+	}
+
+	//number 6
+	if (qNum == 6){
+		cin.ignore();
+
+		int num1, num2;
+		ifstream infile;
+		ofstream outfile;
+
+		infile.open("input.dat");
+		outfile.open("output.dat");
+		infile >> num1 >> num2;
+		outfile << "Sum == " << num1 + num2 << endl;
+		infile.close();
+		outfile.close();
+		
+		return 0;
+
+	}
+/*
+	if (qNum == 7){
+		char qChar;
+		cout << "\nNow enter the problem letter: " << endl;
+		cin >> qChar;
+
+		double distance = 375, speed = 58, travelTime;
+		ifstream infile;
+
+		outfile.open("travel.dat");
+		outfile << showpoint << fixed << setprecsion(2);
+		outfile << "Speed: " << speed << endl;
+		outfile << "Distance: " << distance << endl;
+		outfile << "Day: " << day << endl;
+
+		travelTime = ;
+		outfile << "Travel Time: " << travelTime << endl;
+	}
 
 	return 0;
+	*/
 }

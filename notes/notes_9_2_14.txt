@@ -1,6 +1,0 @@
-//notes 
-// sept, 12 2014
-
-chapter 1: an overview of computers and programming languages
-
-

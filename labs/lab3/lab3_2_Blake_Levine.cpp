@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -14,23 +15,24 @@ int main() {
 	//calculates income before and after taxes
 	totalIncome = 5.00 * (payRate * hrsWorkWeek);
 	postTaxIncome = totalIncome - (.14 * totalIncome);
-	cout << "Total income before taxes is $" << totalIncome << ", and after taxes is $" << postTaxIncome << "." << endl;
+	cout << showpoint << fixed << setprecision(2);
+	cout << "Total income before taxes is $" << totalIncome << ", and after taxes is $" << postTaxIncome << endl;
 
 	//money spent on clothes and accessories
 	double spendClothes = postTaxIncome * .10;
-	cout << "Total income spent on clothes and accessories: $" << spendClothes << ".00" << endl;
+	cout << "Total income spent on clothes and accessories: $" << spendClothes << endl;
 
 	//money spent on schoolsupplies
 	double spendSchoolSupplies = postTaxIncome * .01;
-	cout << "Total income spent on clothes and accessories: $" << spendSchoolSupplies << "0" << endl;
+	cout << "Total income spent on clothes and accessories: $" << spendSchoolSupplies << endl;
 
 	//money spent on savings bonds
 	double spendBonds = postTaxIncome * .25;
-	cout << "Total income spent on clothes and accessories: $" << spendBonds << ".00" << endl;
+	cout << "Total income spent on clothes and accessories: $" << spendBonds << endl;
 
 	//money parents spend on savings bonds
 	double spendBondsParents = spendBonds * .50;
-	cout << "Total income spent on clothes and accessories: $" << spendBondsParents << ".00" << endl;
+	cout << "Total income spent on clothes and accessories: $" << spendBondsParents << endl;
 
 
 
