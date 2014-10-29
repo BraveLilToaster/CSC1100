@@ -17,85 +17,85 @@ Assignment 1 is due on 9/16/14.
 /***Notes 9-18-14***\
 
 //cmath and pow function
-	#include <cmath>
-	pow(2.0, 3.0);
+        #include <cmath>
+        pow(2.0, 3.0);
 
 //get
-	cin.get();
+        cin.get();
 
 //putback
-	cin.putback('m');
+        cin.putback('m');
 
 
 //peek
-	ch2 = cin.peek();
+        ch2 = cin.peek();
 
 //clear
-	cin.clear();
+        cin.clear();
 
 //ignore
-	cin.ignore(val1, val2);
+        cin.ignore(val1, val2);
 
 //iomanip and setprecision
-	#include <iomanip>
-	//sets decimal precsion
-	cout << showpoint << fixed << setprecison(2);
+        #include <iomanip>
+        //sets decimal precsion
+        cout << showpoint << fixed << setprecison(2);
 
 //set width
-	setw (10)
+        setw (10)
 
 //set fill 
-	cout << setfill('*')
-	cout << left << setfill('*')
-	cout << right << setfill('*')
+        cout << setfill('*')
+        cout << left << setfill('*')
+        cout << right << setfill('*')
 
 //stores whole line in str1
-	string str1, str2
-	getline(cin, str1);
+        string str1, str2
+        getline(cin, str1);
 
 //reading in a file
-	#include <fstream>
-	//declare filestream variables
-	ifstream inData;
-	ofstream outData;
+        #include <fstream>
+        //declare filestream variables
+        ifstream inData;
+        ofstream outData;
 
-	//open a file
-	inData.open("prog.dat");
-	outData.open("prog.out");
+        //open a file
+        inData.open("prog.dat");
+        outData.open("prog.out");
 
-	//close a file
-	inData.close();
-	outData.close();
+        //close a file
+        inData.close();
+        outData.close();
 
 
 /***Notes 9-23-14***\
 
 //If statements/booleans
-	if(x >= y){
+        if(x >= y){
 
-		do stuff;
-	}
-	else if(x <= y) {
-		do other stuff;
-	}
-	else {
-		do a differtn thing;
-	}
+                do stuff;
+        }
+        else if(x <= y) {
+                do other stuff;
+        }
+        else {
+                do a differtn thing;
+        }
 
 //complex boolean expressions
-	and - &&
-	or - ||
+        and - &&
+        or - ||
 
 //truth table
 
-	expression1 | expression2 | 
-	true	    | true	  |
-	true	    | false	  |
-	false	    | true	  |
-	false	    | false	  |
+        expression1 | expression2 | 
+        true        | true        |
+        true        | false       |
+        false       | true        |
+        false       | false       |
 
 //the not operator
-	!
+        !
 
 
 /***Notes 9-30-14 ***\
@@ -103,87 +103,87 @@ Assignment 1 is due on 9/16/14.
 
 //mutli way if else
 
-	if()
+        if()
 
-	else if()
+        else if()
 
-	else()
+        else()
 
 //switch statement
 
-	switch(num1) {
-		case 1:
-			cout << num1 == 1" << endl;
-			break;
-		case 3:
-			cout << num1 == 3" << endl;
-			break;
-		case 5:
-			cout << num1 == 5" << endl;
-			break;
-		default:
-			cout << "no match" << endl;
-		}
+        switch(num1) {
+                case 1:
+                        cout << num1 == 1" << endl;
+                        break;
+                case 3:
+                        cout << num1 == 3" << endl;
+                        break;
+                case 5:
+                        cout << num1 == 5" << endl;
+                        break;
+                default:
+                        cout << "no match" << endl;
+                }
 
 //assert
-	#include <cassert>
+        #include <cassert>
 
-	int main(){
-		int num1 = 10, num2 = 2;
-		assert(num2);
-			cout << num1 / num2 < endl;
+        int main(){
+                int num1 = 10, num2 = 2;
+                assert(num2);
+                        cout << num1 / num2 < endl;
 
-		return 0;
-	}
+                return 0;
+        }
 
 //disable all assert after line
-	#define NDEBUG;
-	#include <cassert>
+        #define NDEBUG;
+        #include <cassert>
 
 
 CHAPTER 5
 
 //while loop
-	int num1 = 0; num2 = 5;
-	while ( num1 < num2) {
-		cout << num1++ << endl;
-	}
-	//while loop can contain cin or input file 
+        int num1 = 0; num2 = 5;
+        while ( num1 < num2) {
+                cout << num1++ << endl;
+        }
+        //while loop can contain cin or input file 
 
 //counter in a while loop with nested if loop
 
 
-	int counter = 1;
-	int sum = 0;
-	while (counter <= 10) {
+        int counter = 1;
+        int sum = 0;
+        while (counter <= 10) {
 
-		if(counter % 2 != 0) {
-			sum = sum + counter;
-			cout << counter << endl;
-		} 
-	}
-	counter++;
+                if(counter % 2 != 0) {
+                        sum = sum + counter;
+                        cout << counter << endl;
+                } 
+        }
+        counter++;
 
 // 4 forms of the while loop
 
-	//counter control while loop
-		
-		while(counter < 5)
+        //counter control while loop
+                
+                while(counter < 5)
 
-	//sentinal while loop
+        //sentinal while loop
 
-		while (var != 5)
-	//
+                while (var != 5)
+        //
 
-	//End of File (EOF)
-		while(
+        //End of File (EOF)
+                while(
 
 //random function
-	#include <cstdlib>
-	rand();
+        #include <cstdlib>
+        rand();
 
 //
-	srand();
+        srand();
 
 
 /*** notes 10-7-14 ***\
@@ -193,67 +193,70 @@ CHAPTER 5
 
 //do while loop
 
-	do
-		statement;
-	while(expression);
+        do
+                statement;
+        while(expression);
 
 //example
-	i = 11;
+        i = 11;
 
-	do {
-		cout << i << " ";
-		i = i + 5;
-	}
-	while(i <= 10);
+        do {
+                cout << i << " ";
+                i = i + 5;
+        }
+        while(i <= 10);
 
-	cout << endl;
+        cout << endl;
 
 // break and continue
 
-	//terminates loop
-	break;
+        //terminates loop
+        break;
 
-	//skips one iteration
-	continue;
+        //skips one iteration
+        continue;
 
 /*** Notes 10-9-14 ***\
 
 //nested for loops
-	
-	int row;
-	for (int row = 0; row <=5; row++) {
+        
+        int row;
+        for (int row = 0; row <=5; row++) {
 
-		for(int col = 0; col > row; col++){
-		
-			cout << "*";
-		}
-		cout << endl;
+                for(int col = 0; col > row; col++){
+                
+                        cout << "*";
+                }
+                cout << endl;
 
-	}
-	
-	cout << row;
+        }
+        
+        cout << row;
 
 //functions outside of the main
 
-	#include<iostream>
-	using namespace std;
+        #include<iostream>
+        using namespace std;
 
-	int add(int num1, int num2){
+        int add(int num1, int num2){
 
-		//local Variable
-		int sum;
-		
-		sum = num1 + num2;
-		
-		return sum;
-	}
+                //local Variable
+                int sum;
+                
+                sum = num1 + num2;
+                
+                return sum;
+        }
 
 
-	int main() {
-		
-		int sum2;
-		sum2 = add(2, 4);
+        int main() {
+                
+                int sum2;
+                sum2 = add(2, 4);
 
-		//or
-		cout << add(2, 4);
-	}
+                //or
+                cout << add(2, 4);
+        }
+
+
+
