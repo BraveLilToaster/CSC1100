@@ -20,12 +20,14 @@ void menu() {
         int sessions, months;
         bool seniorCit;
 
-        clr();
         do {
+		//clear window
+		clr();
+		//menu
                 cout << setfill('*') << setw(60) << "" << endl;
-                cout << setfill(' ') << "* "  << setw(58) << " *" << endl;
+                cout << setfill(' ') << "* "  << setw(58) << internal << " *" << endl;
                 cout << setfill(' ') << "* "  << setw(56) << left << "Welcome To the PowerHouse Gym." << " *" << endl;
-                cout << setfill(' ') << "* "  << setw(58) << " *" << endl;
+                cout << setfill(' ') << "* "  << setw(58) << internal << " *" << endl;
                 cout << setfill('*') << setw(60) << "" << endl;
                 cout << setfill(' ') << "* "  << setw(56) << left << "Membership is $75.00 per month." << " *" << endl;
                 cout << setfill(' ') << "* "  << setw(56) << left << "Each Session is $50.00." << " *" << endl;
@@ -34,19 +36,21 @@ void menu() {
                 cout << setfill(' ') << "* " << setw(56) << "(3) I am pruchasing 5 or more personal training sessions" << " *" << endl;
                 cout << setfill('*') << setw(60) << "" << endl;
                 cout << setfill(' ') << endl;
+		//input 
                 getInput(seniorCit, months, sessions);
+		//clear window
                 clr();
-                cout << "Your total is: " << cost(priceSession, pricePerMonth, sessions, months, seniorCit )  << endl; 
-                cout << "Continue? (y/n)"
-                if(menuCondition == 'n' || menuCondition == 'N' ) {
-                        break;
-                }
+		//Output Total
+		cout << showpoint << fixed << setprecision (2);
+                cout << "Your total is: $" << cost(priceSession, pricePerMonth, sessions, months, seniorCit )  << endl; 
+		cout << noshowpoint;
+		//continue
+                cout << "Continue? (y/n)" << endl;
+		cin >> menuCondition;
         }
-        while(menuCondition != "exit" || menuCondition != "EXIT" || menuCondition != "Exit"); 
-        
-
-        return;
+        while(menuCondition != 'n' || menuCondition != 'N' ) ;
 }
+
 
 void getInput(bool& seniorCit, int& months, int& sessions) {
         char senior;
@@ -68,9 +72,18 @@ void getInput(bool& seniorCit, int& months, int& sessions) {
 
         cout << "How many months of memebership would you like to purchase? " << endl;
         cin >> months;
+	while(months < 0) {
+		cout << "Invalid Input. Try again." << endl;	
+		cin >> months;
+	}
 
         cout << "How many sessions woud you like to purchase? " << endl;
         cin >> sessions;
+	while(sessions <= 0) {
+		cout << "Invalid Input. Try again." << endl;	
+		cin >> sessions;
+	}
+
         return;
 }
 
