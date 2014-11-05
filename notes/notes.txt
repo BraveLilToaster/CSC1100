@@ -260,3 +260,18 @@ CHAPTER 5
 
 
 
+2-d arrays
+
+        int main(){
+                int  Arr[10];
+                int  Arr2[2][3];
+
+                //fills rows
+                for (int  r=0; r < 2; r++){
+                        //fills columns
+                        for (int  c=0; c < 3; c++){
+                                cin >> Arr[r][c] << " ";
+                        }
+                         cout << endl;
+                }
+        }
