@@ -3,7 +3,7 @@ CC = g++
 
 all: problem$(LABNUM)_1 problem$(LABNUM)_2 
 
-PART = 1
+PART = 2
 problem$(LABNUM)_$(PART): problem$(LABNUM)_$(PART)BlakeLevine.o
 	$(CC) problem$(LABNUM)_$(PART)BlakeLevine.o -o problem$(LABNUM)_$(PART)
 problem$(LABNUM)_$(PART)BlakeLevine.o: problem$(LABNUM)_$(PART)BlakeLevine.cpp
