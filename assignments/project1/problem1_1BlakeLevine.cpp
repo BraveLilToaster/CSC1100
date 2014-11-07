@@ -29,6 +29,9 @@ int main() {
     //continue prompt
     cout << "Return to menu? (y/n)" << endl;
     cin >> menuCondition;
+    if(menuCondition != 'n' || menuCondition != 'N' ){
+        break;
+    } 
     }
     while(menuCondition != 'n' || menuCondition != 'N' ) ;
 
