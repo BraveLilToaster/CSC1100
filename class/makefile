@@ -1,9 +1,11 @@
+NAME = main
 
-test: test.o
-	g++ test.o -o test
 
-test.o: test.cpp
-	g++ -c test.cpp
+$(NAME): $(NAME).o
+	g++ $(NAME).o -o $(NAME)
+
+$(NAME).o: $(NAME).cpp
+	g++ -c $(NAME).cpp
 
 clean:
-	rm -rf *o test
+	rm -rf *o $(NAME)

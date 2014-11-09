@@ -56,6 +56,7 @@ void buyCoffee(int smallCost, int smallSize, int& smallTotal, int mediumCost, in
     
     //menu
     menu();
+    cin.clear();
 
     while (cont != 'n' || cont != 'N') {
         cout << "What size coffee would you like? (S, M, L)" << endl;
@@ -103,6 +104,7 @@ void cupsSold(int smallTotal, int mediumTotal, int largeTotal) {
     //menu
     menu();
 
+    cout << showpoint << fixed << setprecision(0);
     cout << "Total small cups sold: " << smallTotal << endl;
     cout << "Total medium cups sold: " << mediumTotal << endl;
     cout << "Total large cups sold: " << largeTotal << endl;
@@ -121,7 +123,7 @@ void ozCoffee(int smallTotal, int smallSize, int mediumTotal, int  mediumSize, i
     //menu
     menu();
 
-    cout << showpoint << fixed << setprecision(2);
+    cout << showpoint << fixed << setprecision(0);
     cout << "Total oz sold: " << totaloz << endl;
 
 
@@ -137,6 +139,7 @@ void showProfit(int smallTotal, double smallCost, int mediumTotal, double medium
     //menu
     menu();
 
+    cout << showpoint << fixed << setprecision(2);
     cout << "Total profits earned: $" << profit << endl;
 
 
