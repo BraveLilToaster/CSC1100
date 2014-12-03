@@ -26,6 +26,7 @@ int main() {
 	return 0;
 }
 
+//function to choose which cards to flip
 void flip(int& match, char sideBoard[][4], int board[][4]) {
 	int r1 = 0, r2 = 0, c1 = 0, c2 = 0;
 	char cont;
@@ -97,10 +98,11 @@ void boardState(char sideBoard[][4], int board[][4]) {
 	cout << "  " << setfill('-') << setw(17) << "" << endl;
 }
 
+//shuffles cards before game begins
 void shuffle(int board[][4], char sideBoard[][4]) {
 	int card = 0;
 	int c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0, c7 = 0, c8 = 0;
-	srand(time(NULL));  //  using the time seed from srand explanation 
+	srand(time(NULL));
 
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
