@@ -1,4 +1,4 @@
-# Compiled Object files
+ompiled Object files
 *.slo
 *.lo
 *.o
@@ -27,6 +27,10 @@
 *.out
 *.app
 
-# vim swap files
-*.swp
-*.swo
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
